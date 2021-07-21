@@ -1,5 +1,10 @@
 # Intervalador
 Una aplicación de Android para contar tiempos definidos intercalados por un intervalo, hecha con el MIT App Inventor.
 
+## To do:
+- Editar "Temporizadores"
+- Elegir sonidos del dispositivo.
+
 # Disclaimers:
-- No funciona bien en segundo plano. La aplicación debe estar en pantalla. (No se han hecho pruebas concretas con pantalla dividida.)
+- La aplicación debe estar en pantalla para mantenerse funcionando. En segundo plano, funciona por un tiempo (no probado, probablemente dependa de cada dispositivo / sistema operativo / configuración) hasta congelarse.
+- No se han hecho pruebas concretas con pantalla dividida. Podría hibernar o no.
