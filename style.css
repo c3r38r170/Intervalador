@@ -1,0 +1,131 @@
+/* Font Awesome */
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+	src:url("fa-regular-400.ttf") format("truetype");
+}
+
+/* .far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+} */
+
+/* Principal */
+
+*{
+	text-align: center;
+	font-size: 1rem;
+	font-family: sans-serif;
+	color:white;
+}
+	body,html{
+		padding: 0;
+	}
+	body{
+		background-color: black;
+		display: flex;
+		flex-direction: column;
+		gap:1rem;
+	}
+		.ciclo{
+			display: grid;
+			grid-template:
+				"a a a j"
+				"b b c c"
+				"d e f g"
+				"h h i i";
+			background: gray;
+			gap: 0.3rem;
+			padding: 0.3rem;
+		}
+			.ciclo *{
+				border-radius: .25rem;
+				height: 2.5rem;
+				display: flex;justify-content: center;align-items: center;
+
+			}
+				.ciclo span {
+					background: black;
+				}
+					.eliminar:before{
+						content:'\f057';
+					}
+					.nombre{
+						grid-area:a;
+						font-size: larger;
+						font-weight: bold;
+					}
+					.intervalo-titulo{
+						grid-area: b;
+					}
+					.duracion-titulo{
+						grid-area: c;
+					}
+					.reiniciar:before{
+						content:'\f28d';
+					}
+						.intervalo-visor{
+							grid-area: h;
+						}
+						.duracion-visor{
+							grid-area: i;
+						}
+							.reproduciendo[data-tipo="intervalo"] ~ .intervalo-visor
+								,.reproduciendo[data-tipo="duracion"] ~ .duracion-visor{
+								animation: breathe infinite 1s;
+							}
+								@keyframes breathe{
+									50%{
+										font-size: larger;
+									}
+									100%{
+										font-size: inherit;
+									}
+								}
+							.blink{
+								--blink-color: red;
+								animation: blink infinite 1s !important;
+							}
+								@keyframes blink{
+									50%{
+										color: var(--blink-color);
+									}
+									100%{
+										color: currentColor;
+									}
+								}
+				.ciclo button{
+					background-color: #444;
+					margin: 0 5px 5px 0;
+					border:none;
+					box-shadow: black 5px 5px;
+					font-size: 1.5rem;
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 400;
+				}
+					.cambiarReproduccion.reproduciendo:before{
+						content:'\f28b';
+					}
+					.cambiarReproduccion:not(.reproduciendo):before{
+						content:'\f144';
+					}
+					.blink-once{
+						--blink-color:transparent;
+						animation: blink 1 300ms;
+					}
+					.ciclo button[disabled]{
+						opacity: .5;
+					}
+					.ciclo button:not([disabled]):hover{
+						background-color: #333;
+					}
+					.ciclo button:not([disabled]):active{
+						margin: 3px 2px 2px 3px;
+						box-shadow: black 2px 2px;
+					}
+					.eliminar{
+						color: red;
+					}
