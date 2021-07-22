@@ -3,7 +3,7 @@ Una aplicación de Android para contar tiempos definidos intercalados por un int
 
 ## To do:
 - Editar "Temporizadores"
-- Elegir sonidos del dispositivo. (Este es el cambio que necesita la aplicación para dejar de estar en alpha.)
+- Elegir sonidos del dispositivo. (Este es el cambio que necesita la aplicación para dejar de estar en Alpha.)
 
 # Disclaimers:
 - La aplicación debe estar en pantalla para mantenerse funcionando. En segundo plano, funciona por un tiempo (no probado, probablemente dependa de cada dispositivo / sistema operativo / configuración) hasta congelarse.
